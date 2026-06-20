@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art of Akshay — Illustration &amp; Watercolor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Work+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>
+(function(){
+  var saved = localStorage.getItem('theme');
+  var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  if(theme === 'dark') document.documentElement.setAttribute('data-theme','dark');
+})();
+</script>
+</head>
+<body>
+
+<div class="wash-bg" aria-hidden="true">
+  <svg viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <filter id="wash-blur" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="70"/>
+      </filter>
+    </defs>
+    <g filter="url(#wash-blur)">
+      <ellipse class="blob blob-gold" cx="220" cy="160" rx="340" ry="220"/>
+      <ellipse class="blob blob-indigo" cx="1360" cy="120" rx="300" ry="260"/>
+      <ellipse class="blob blob-coral" cx="900" cy="650" rx="260" ry="180"/>
+    </g>
+  </svg>
+</div>
+
+<nav id="site-nav">
+  <a href="#top" class="nav-logo">Art <span class="nav-logo-of">of</span> Akshay</a>
+  <button id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links" id="nav-links">
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="https://www.instagram.com/artofakshay_" target="_blank" rel="noopener" class="nav-ig" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
+    </a>
+    <button id="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">
+      <svg class="icon-sun" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v3M12 18.5v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2.5 12h3M18.5 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11Z"/></svg>
+    </button>
+  </div>
+</nav>
+
+<header id="top" class="hero">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">Illustration · Watercolor · Concept Art</p>
+    <h1 class="hero-title">It's not just<br>water <span class="hero-amp">&amp;</span> paint<span class="hero-wave">🌊</span></h1>
+    <p class="hero-bio">I'm Akshay — a BFA student working between digital portraiture, ink, and watercolor sketchbooks. Most days you'll find me chasing light across a page, whether that's a glowing dragonfly or the back of someone's head on a crowded street.</p>
+    <div class="hero-actions">
+      <a href="#work" class="btn btn-primary">View the work</a>
+      <a href="#contact" class="btn btn-ghost">Get in touch</a>
+    </div>
+  </div>
+  <div class="hero-brush" aria-hidden="true">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0,30 C150,5 300,55 450,28 C600,2 750,52 900,26 C1020,8 1120,40 1200,22" /></svg>
+  </div>
+</header>
+
+<main>
+
+<section id="work" class="work-section">
+  <div class="section-head">
+    <h2 class="section-title">Selected Work</h2>
+    <div class="view-toggle" role="tablist" aria-label="Browse by">
+      <button class="toggle-btn is-active" data-view="category" role="tab" aria-selected="true">By Category</button>
+      <button class="toggle-btn" data-view="series" role="tab" aria-selected="false">By Series</button>
+    </div>
+  </div>
+
+  <div id="gallery-root"></div>
+</section>
+
+<section id="about" class="about-section">
+  <div class="about-grid">
+    <div class="about-portrait">
+      <img src="assets/digital/dragonfly-whisper.jpg" alt="A Quiet Visitor — digital illustration by Akshay">
+    </div>
+    <div class="about-copy">
+      <p class="section-eyebrow">About</p>
+      <h2 class="section-title">Akshay</h2>
+      <p>Akshay is currently pursuing a Bachelor of Fine Arts, working across digital illustration, ink, and watercolor. His sketchbooks travel everywhere with him — street vendors, family afternoons, plants on a balcony — while his digital work leans into warmer, painterly portraiture and the occasional bit of fantasy.</p>
+      <p>He posts as <a href="https://www.instagram.com/artofakshay_" target="_blank" rel="noopener">@artofakshay_</a>, where the sketchbook pages, process shots, and finished pieces all live side by side.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact-section">
+  <div class="contact-inner">
+    <p class="section-eyebrow">Get in touch</p>
+    <h2 class="section-title">Let's talk about a piece</h2>
+    <p class="contact-sub">Commissions, collaborations, or just to say hello — reach out any of these ways.</p>
+    <div class="contact-links">
+      <a href="mailto:supersimpletech81@gmail.com" class="contact-link">
+        <span class="contact-label">Email</span>
+        <span class="contact-value">supersimpletech81@gmail.com</span>
+      </a>
+      <a href="tel:+911234567891" class="contact-link">
+        <span class="contact-label">Phone</span>
+        <span class="contact-value">+91 12345 67891</span>
+      </a>
+      <a href="https://www.instagram.com/artofakshay_" target="_blank" rel="noopener" class="contact-link">
+        <span class="contact-label">Instagram</span>
+        <span class="contact-value">@artofakshay_</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <p>Art of Akshay — © 2026</p>
+</footer>
+
+<div id="lightbox" class="lightbox" aria-hidden="true">
+  <button class="lightbox-close" aria-label="Close">&times;</button>
+  <button class="lightbox-prev" aria-label="Previous">&#8249;</button>
+  <button class="lightbox-next" aria-label="Next">&#8250;</button>
+  <figure class="lightbox-figure">
+    <img id="lightbox-img" src="" alt="">
+    <figcaption>
+      <span id="lightbox-title"></span>
+      <span id="lightbox-medium" class="lightbox-medium"></span>
+    </figcaption>
+  </figure>
+</div>
+
+<script src="manifest-data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
